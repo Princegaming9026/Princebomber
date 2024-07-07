@@ -2,6 +2,46 @@
 <html>
 <head>
     <title>Form Submission</title>
+    <style>
+        body {
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            text-align: center;
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333333;
+            color: #ffffff;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444444;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555555;
+        }
+    </style>
     <script>
         function submitForm(event) {
             event.preventDefault(); // Prevent the default form submission
@@ -42,14 +82,17 @@
     </script>
 </head>
 <body>
-    <form onsubmit="submitForm(event)">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+    <div class="form-container">
+        <form onsubmit="submitForm(event)">
+            <h1>Form Submission</h1>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
 
-        <label for="mobile">Mobile Number:</label>
-        <input type="text" id="mobile" name="mobile" required><br><br>
+            <label for="mobile">Mobile Number:</label><br>
+            <input type="text" id="mobile" name="mobile" required><br><br>
 
-        <button type="submit">Submit</button>
-    </form>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
