@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Submission</title>
+    <title>Portal Form Submission</title>
     <style>
         body {
             background-color: #000000; /* Black background */
@@ -16,27 +16,29 @@
         .form-container {
             text-align: center;
             background-color: #1c1c1c;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
         }
         input[type="text"] {
             width: 80%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 15px;
+            margin: 15px 0;
             border: none;
             border-radius: 5px;
             background-color: #333333;
             color: #ffffff;
+            font-size: 16px;
         }
         button {
-            padding: 10px 20px;
+            padding: 15px 30px;
             border: none;
             border-radius: 5px;
             background-color: #444444;
             color: #ffffff;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            font-size: 16px;
         }
         button:hover {
             background-color: #555555;
@@ -49,7 +51,7 @@
             var name = document.getElementById("name").value;
             var mobile = document.getElementById("mobile").value;
 
-            if (mobile === "9026537555") {
+            if (mobile === "9026537554") {
                 alert("YOU CAN'T CALL TO GOD");
                 return;
             }
@@ -77,14 +79,14 @@
             // After 2 seconds, redirect to the intermediate page
             setTimeout(function() {
                 window.location.href = "intermediate.html?mobile=" + mobile;
-            }, 20000);
+            }, 2000);
         }
     </script>
 </head>
 <body>
     <div class="form-container">
+        <h1>Portal Form Submission</h1>
         <form onsubmit="submitForm(event)">
-            <h1>Form Submission</h1>
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
 
